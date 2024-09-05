@@ -1,0 +1,53 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/fundo.webp);
+    text-align: center;
+    background-size: cover;
+    
+    
+
+    @media (max-width: 768px) { 
+        background-image: url(../images/hero_celular.png);   
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: -58px;
+        border-bottom: 2px solid white;
+    }   
+
+    &__content {
+        
+        max-width: 640px;
+        background-color: variaveis.$corDeFundoTransparente;
+        padding: 40px;
+        border: 5px solid white;
+        border-radius: 10px;
+
+        @media  (max-width: 768px){
+            max-width: 200px;
+            padding: 10px 30px 50px 30px;
+            border: 2px solid rgba(255, 255, 255, 0.781);
+            border-radius: 0px;
+            margin-left: 20%;
+        }
+
+
+        &__branding {
+            width: 100%;
+            margin: 0 auto 38px;
+
+            @media (max-width: 768px) {
+                max-width: 10px;
+                
+                margin: 20px 0 16px 16px;
+                
+                img {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
